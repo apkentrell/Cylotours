@@ -4,665 +4,1563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cylo Tours – Discover Sri Lanka</title>
-<meta name="description" content="Cylo Tours offers unforgettable travel experiences across Sri Lanka. Explore wildlife safaris, ancient cities, beaches, and cultural tours with expert local guides.">
-<meta name="keywords" content="Sri Lanka tours, Sigiriya tours, wildlife safari Sri Lanka, Polonnaruwa tours, Sri Lanka travel, Cylo Tours">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Cylo Tours – Best Activities & Tours in Habarana, Sri Lanka</title>
+<meta name="description" content="Discover the best things to do in Habarana, Sri Lanka. Jeep safaris, village tours, elephant gatherings, Sigiriya rock fortress, Dambulla cave temple & private Sri Lanka round tours. Best prices guaranteed.">
+<meta name="keywords" content="things to do in Habarana, Habarana activities, best safari tours Sri Lanka, Hiriwadunna village tour, elephant gathering safari, Sigiriya rock fortress tour, Dambulla cave temple, Sri Lanka private drivers, safe tour drivers Sri Lanka, cheap village tours Habarana, Sri Lanka round tours">
+<meta property="og:title" content="Cylo Tours – Best Activities in Habarana & Sri Lanka Round Tours">
+<meta property="og:description" content="Jeep safaris, village tours, cooking classes, elephant gathering & private round tours across Sri Lanka. Professional drivers. Best prices guaranteed.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --gold: #C9973A;
-    --gold-light: #E8B85A;
-    --deep: #0D1B1E;
-    --dark: #142428;
-    --mid: #1E3338;
-    --text: #F2EDE4;
-    --muted: #9DB0B5;
-    --white: #FFFFFF;
-    --card-bg: #192C31;
-  }
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --forest:    #1A2E1A;
+  --jungle:    #243824;
+  --moss:      #3D5A3E;
+  --leaf:      #5B8C5A;
+  --sage:      #8FB491;
+  --amber:     #D4821A;
+  --amber-lt:  #F0A53A;
+  --sand:      #F5EDD8;
+  --cream:     #FBF7EF;
+  --white:     #FFFFFF;
+  --muted:     #9DAF9E;
+  --card:      #1E3320;
+  --card2:     #243D26;
+  --wa-green:  #25D366;
+  --shadow:    rgba(0,0,0,0.45);
+  --gold-glow: rgba(212,130,26,0.25);
+}
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-font-family: ‘DM Sans’, sans-serif;
-background: var(–deep);
-color: var(–text);
-overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+  background: var(--forest);
+  color: var(--sand);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── NAV ── */
-nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-display: flex; align-items: center; justify-content: space-between;
-padding: 18px 6%;
-background: rgba(13,27,30,0.92);
-backdrop-filter: blur(14px);
-border-bottom: 1px solid rgba(201,151,58,0.15);
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+
+/* ═══════════════════════════════════════════
+   TOP CONTACT BAR
+═══════════════════════════════════════════ */
+.topbar {
+  background: var(--jungle);
+  border-bottom: 1px solid rgba(212,130,26,0.2);
+  padding: 8px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 8px;
 }
+.topbar-left { display: flex; gap: 20px; align-items: center; }
+.topbar-left a { color: var(--muted); transition: color 0.2s; }
+.topbar-left a:hover { color: var(--amber-lt); }
+.topbar-right { display: flex; gap: 10px; }
+.topbar-btn {
+  padding: 5px 14px; border-radius: 30px; font-size: 0.75rem;
+  font-weight: 600; font-family: 'Outfit', sans-serif;
+  cursor: pointer; transition: all 0.25s; border: none;
+  letter-spacing: 0.3px;
+}
+.topbar-btn.wa  { background: var(--wa-green); color: #fff; }
+.topbar-btn.wa:hover { background: #1fb855; }
+.topbar-btn.call { background: var(--amber); color: #fff; }
+.topbar-btn.call:hover { background: var(--amber-lt); }
+
+/* ═══════════════════════════════════════════
+   STICKY NAVBAR
+═══════════════════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 900;
+  background: rgba(26,46,26,0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212,130,26,0.18);
+  padding: 14px 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
 
 .logo {
-font-family: ‘Playfair Display’, serif;
-font-size: 1.7rem; font-weight: 900;
-color: var(–gold);
-letter-spacing: 1px;
-text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--amber-lt); letter-spacing: 0.5px;
+}
+.logo span { color: var(--sand); }
+.logo sup {
+  font-size: 0.45em; vertical-align: super; color: var(--sage);
+  font-family: 'Outfit', sans-serif; font-weight: 400; letter-spacing: 1px;
 }
 
-.logo span { color: var(–text); }
-
-.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a {
-color: var(–muted); text-decoration: none;
-font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px;
-transition: color 0.3s;
+  color: var(--muted); font-size: 0.87rem; font-weight: 500;
+  transition: color 0.25s; letter-spacing: 0.3px;
 }
-.nav-links a:hover { color: var(–gold); }
+.nav-links a:hover { color: var(--amber-lt); }
 
-.nav-cta {
-background: var(–gold); color: var(–deep);
-padding: 10px 24px; border-radius: 50px;
-font-weight: 600; font-size: 0.88rem;
-text-decoration: none; letter-spacing: 0.5px;
-transition: background 0.3s, transform 0.2s;
+.nav-right { display: flex; gap: 10px; align-items: center; }
+
+.nav-wa {
+  background: var(--wa-green); color: #fff;
+  padding: 9px 18px; border-radius: 30px;
+  font-size: 0.82rem; font-weight: 600;
+  transition: all 0.25s; white-space: nowrap;
 }
-.nav-cta:hover { background: var(–gold-light); transform: translateY(-1px); }
+.nav-wa:hover { background: #1fb855; transform: translateY(-1px); }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.hamburger span { width: 24px; height: 2px; background: var(–gold); border-radius: 2px; }
+.nav-book {
+  background: var(--amber); color: #fff;
+  padding: 9px 20px; border-radius: 30px;
+  font-size: 0.82rem; font-weight: 700;
+  transition: all 0.25s; white-space: nowrap;
+}
+.nav-book:hover { background: var(--amber-lt); transform: translateY(-1px); box-shadow: 0 6px 20px var(--gold-glow); }
 
-/* ── HERO ── */
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 22px; height: 2px; background: var(--amber-lt); border-radius: 2px; transition: all 0.3s; }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--forest); z-index: 999;
+  padding: 60px 5% 40px;
+  flex-direction: column; gap: 24px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu-close {
+  position: absolute; top: 20px; right: 20px;
+  background: none; border: none; color: var(--amber-lt);
+  font-size: 1.5rem; cursor: pointer;
+}
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; color: var(--sand); font-weight: 600;
+  border-bottom: 1px solid rgba(212,130,26,0.1); padding-bottom: 16px;
+}
+.mobile-menu a:hover { color: var(--amber-lt); }
+.mobile-menu-btns { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
 .hero {
-min-height: 100vh;
-background:
-linear-gradient(to bottom, rgba(13,27,30,0.55) 0%, rgba(13,27,30,0.3) 40%, rgba(13,27,30,0.85) 100%),
-url(‘https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?w=1600&q=80’) center/cover no-repeat;
-display: flex; align-items: center;
-padding: 0 6%;
-position: relative;
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  overflow: hidden;
 }
 
-.hero-content { max-width: 680px; animation: fadeUp 1s ease both; }
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(26,46,26,0.95) 0%, rgba(26,46,26,0.6) 50%, rgba(26,46,26,0.2) 100%),
+    url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1800&q=85');
+  background-size: cover; background-position: center 40%;
+  will-change: transform;
+}
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,46,26,1) 0%, transparent 40%);
+}
 
-.hero-badge {
-display: inline-flex; align-items: center; gap: 8px;
-background: rgba(201,151,58,0.15);
-border: 1px solid rgba(201,151,58,0.35);
-padding: 6px 16px; border-radius: 50px;
-font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
-color: var(–gold); text-transform: uppercase;
-margin-bottom: 24px;
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 120px 5% 80px;
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(212,130,26,0.12);
+  border: 1px solid rgba(212,130,26,0.3);
+  padding: 6px 16px; border-radius: 30px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+  color: var(--amber-lt); text-transform: uppercase;
+  margin-bottom: 22px;
+  animation: fadeSlideUp 0.8s ease both;
 }
 
 .hero h1 {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(2.8rem, 6vw, 5rem);
-font-weight: 900; line-height: 1.1;
-color: var(–white);
-margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 700; line-height: 1.05;
+  color: var(--white); margin-bottom: 6px;
+  animation: fadeSlideUp 0.9s ease 0.1s both;
 }
+.hero h1 em { color: var(--amber-lt); font-style: italic; }
 
-.hero h1 em { color: var(–gold); font-style: normal; }
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  color: var(--sage); font-style: italic;
+  margin-bottom: 20px;
+  animation: fadeSlideUp 0.9s ease 0.15s both;
+}
 
 .hero p {
-font-size: 1.1rem; line-height: 1.7;
-color: rgba(242,237,228,0.85);
-margin-bottom: 36px; max-width: 520px;
+  font-size: 1.05rem; line-height: 1.75;
+  color: rgba(245,237,216,0.82);
+  margin-bottom: 36px; max-width: 500px;
+  font-weight: 300;
+  animation: fadeSlideUp 1s ease 0.2s both;
 }
 
-.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-btns {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  animation: fadeSlideUp 1s ease 0.3s both;
+  margin-bottom: 50px;
+}
 
 .btn-primary {
-background: var(–gold); color: var(–deep);
-padding: 15px 32px; border-radius: 50px;
-font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px;
-text-decoration: none; transition: all 0.3s;
-box-shadow: 0 8px 28px rgba(201,151,58,0.35);
+  background: var(--amber); color: #fff;
+  padding: 14px 30px; border-radius: 50px;
+  font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px;
+  transition: all 0.3s;
+  box-shadow: 0 8px 24px rgba(212,130,26,0.35);
+  display: inline-flex; align-items: center; gap: 7px;
 }
-.btn-primary:hover { background: var(–gold-light); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(201,151,58,0.45); }
-
-.btn-secondary {
-background: transparent;
-border: 1.5px solid rgba(242,237,228,0.4);
-color: var(–text); padding: 15px 32px;
-border-radius: 50px; font-weight: 500; font-size: 0.95rem;
-text-decoration: none; transition: all 0.3s;
+.btn-primary:hover {
+  background: var(--amber-lt); transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(212,130,26,0.45);
 }
-.btn-secondary:hover { border-color: var(–gold); color: var(–gold); }
 
+.btn-wa {
+  background: var(--wa-green); color: #fff;
+  padding: 14px 26px; border-radius: 50px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: all 0.3s;
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.btn-wa:hover { background: #1fb855; transform: translateY(-2px); }
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid rgba(245,237,216,0.35);
+  color: var(--sand); padding: 14px 26px;
+  border-radius: 50px; font-weight: 500; font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.btn-ghost:hover { border-color: var(--amber-lt); color: var(--amber-lt); }
+
+/* Hero stats strip */
 .hero-stats {
-position: absolute; bottom: 48px; left: 6%;
-display: flex; gap: 40px;
-animation: fadeUp 1.2s ease 0.3s both;
+  position: relative; z-index: 2;
+  display: flex; gap: 0;
+  border-top: 1px solid rgba(212,130,26,0.15);
+  margin: 0 5%;
+  animation: fadeSlideUp 1s ease 0.45s both;
 }
-
-.stat-item { text-align: center; }
+.stat-item {
+  flex: 1; padding: 20px 0;
+  border-right: 1px solid rgba(212,130,26,0.12);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
 .stat-num {
-font-family: ‘Playfair Display’, serif;
-font-size: 1.8rem; font-weight: 700; color: var(–gold);
-display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 700; color: var(--amber-lt);
+  display: block; line-height: 1;
 }
-.stat-label { font-size: 0.78rem; color: var(–muted); letter-spacing: 0.5px; }
+.stat-label { font-size: 0.73rem; color: var(--muted); letter-spacing: 0.5px; margin-top: 4px; }
 
-/* ── SEARCH BAR ── */
-.search-section {
-padding: 0 6%; margin-top: -40px; position: relative; z-index: 10;
+/* ═══════════════════════════════════════════
+   SEARCH BOX
+═══════════════════════════════════════════ */
+.search-wrap {
+  padding: 0 5%; margin-top: -1px; position: relative; z-index: 10;
+  background: var(--forest);
 }
-
 .search-box {
-background: var(–card-bg);
-border: 1px solid rgba(201,151,58,0.2);
-border-radius: 16px; padding: 28px 32px;
-display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
-box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  background: var(--card);
+  border: 1px solid rgba(212,130,26,0.2);
+  border-radius: 16px; padding: 24px 28px;
+  display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.s-field { flex: 1; min-width: 150px; }
+.s-field label {
+  font-size: 0.7rem; color: var(--amber-lt); letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 7px;
+}
+.s-field select, .s-field input {
+  width: 100%; background: var(--jungle);
+  border: 1px solid rgba(212,130,26,0.15);
+  color: var(--sand); padding: 11px 14px;
+  border-radius: 10px; font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem; outline: none; transition: border 0.25s;
+}
+.s-field select:focus, .s-field input:focus { border-color: var(--amber); }
+.s-field select option { background: var(--forest); }
+.search-go {
+  background: var(--amber); color: #fff;
+  border: none; padding: 12px 28px; border-radius: 10px;
+  font-weight: 700; font-size: 0.9rem; cursor: pointer;
+  font-family: 'Outfit', sans-serif; transition: all 0.25s; white-space: nowrap;
+}
+.search-go:hover { background: var(--amber-lt); transform: translateY(-1px); }
+
+/* ═══════════════════════════════════════════
+   SECTION SHARED STYLES
+═══════════════════════════════════════════ */
+section { padding: 80px 5%; }
+
+.sec-eyebrow {
+  font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); font-weight: 600; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-eyebrow::before {
+  content: ''; display: block; width: 28px; height: 1.5px; background: var(--amber);
 }
 
-.search-field { flex: 1; min-width: 160px; }
-.search-field label { font-size: 0.75rem; color: var(–gold); letter-spacing: 1px; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 8px; }
-.search-field select, .search-field input {
-width: 100%; background: var(–mid);
-border: 1px solid rgba(201,151,58,0.15);
-color: var(–text); padding: 12px 16px;
-border-radius: 10px; font-family: ‘DM Sans’, sans-serif;
-font-size: 0.9rem; outline: none; transition: border 0.3s;
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  font-weight: 700; line-height: 1.15;
+  color: var(--white); margin-bottom: 14px;
 }
-.search-field select:focus, .search-field input:focus { border-color: var(–gold); }
-.search-field select option { background: var(–dark); }
+.sec-title em { color: var(--amber-lt); font-style: italic; }
 
-.search-btn {
-background: var(–gold); color: var(–deep);
-border: none; padding: 13px 32px;
-border-radius: 10px; font-weight: 700; font-size: 0.95rem;
-cursor: pointer; transition: all 0.3s; white-space: nowrap;
-font-family: ‘DM Sans’, sans-serif;
-}
-.search-btn:hover { background: var(–gold-light); transform: translateY(-1px); }
-
-/* ── SECTIONS ── */
-section { padding: 90px 6%; }
-
-.section-label {
-font-size: 0.75rem; letter-spacing: 2.5px; text-transform: uppercase;
-color: var(–gold); font-weight: 600; margin-bottom: 12px;
+.sec-sub {
+  color: var(--muted); font-size: 0.97rem; line-height: 1.75;
+  max-width: 540px; margin-bottom: 48px; font-weight: 300;
 }
 
-.section-title {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-font-weight: 700; line-height: 1.2;
-color: var(–white); margin-bottom: 16px;
+.sec-header-row {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; flex-wrap: wrap; gap: 16px;
+  margin-bottom: 40px;
 }
+.sec-header-row .sec-sub { margin-bottom: 0; }
 
-.section-sub {
-color: var(–muted); font-size: 1rem; line-height: 1.7;
-max-width: 520px; margin-bottom: 50px;
+/* ═══════════════════════════════════════════
+   HABARANA HIGHLIGHTS (cat grid)
+═══════════════════════════════════════════ */
+.highlights { background: var(--jungle); }
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 14px;
 }
-
-/* ── CATEGORIES ── */
-.categories { background: var(–dark); }
-
-.cat-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-gap: 16px; margin-top: 40px;
+.hl-card {
+  background: var(--card);
+  border: 1px solid rgba(212,130,26,0.1);
+  border-radius: 14px; padding: 26px 18px;
+  text-align: center; cursor: pointer;
+  transition: all 0.3s; color: var(--sand);
 }
-
-.cat-card {
-background: var(–card-bg);
-border: 1px solid rgba(201,151,58,0.1);
-border-radius: 14px; padding: 28px 20px;
-text-align: center; cursor: pointer;
-transition: all 0.3s; text-decoration: none;
+.hl-card:hover {
+  border-color: var(--amber);
+  background: var(--card2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
 }
-.cat-card:hover { border-color: var(–gold); transform: translateY(-4px); background: var(–mid); }
-.cat-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
-.cat-name { font-weight: 600; font-size: 0.9rem; color: var(–text); }
-.cat-count { font-size: 0.75rem; color: var(–muted); margin-top: 4px; }
+.hl-icon { font-size: 1.9rem; margin-bottom: 10px; }
+.hl-name { font-weight: 600; font-size: 0.88rem; color: var(--sand); margin-bottom: 4px; }
+.hl-count { font-size: 0.73rem; color: var(--muted); }
 
-/* ── TOUR CARDS ── */
+/* ═══════════════════════════════════════════
+   ACTIVITY CARDS (main tours)
+═══════════════════════════════════════════ */
 .tours-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-gap: 24px; margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+  gap: 22px;
 }
 
-.tour-card {
-background: var(–card-bg);
-border-radius: 18px; overflow: hidden;
-border: 1px solid rgba(201,151,58,0.1);
-transition: all 0.35s; cursor: pointer;
+.t-card {
+  background: var(--card);
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(212,130,26,0.1);
+  transition: all 0.35s;
 }
-.tour-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); border-color: rgba(201,151,58,0.3); }
-
-.card-img {
-width: 100%; height: 220px; object-fit: cover;
-transition: transform 0.4s;
-}
-.tour-card:hover .card-img { transform: scale(1.04); }
-
-.card-img-wrap { overflow: hidden; position: relative; }
-
-.card-badge {
-position: absolute; top: 14px; left: 14px;
-background: var(–gold); color: var(–deep);
-padding: 4px 12px; border-radius: 50px;
-font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+.t-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(212,130,26,0.35);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.55);
 }
 
-.card-body { padding: 20px; }
-.card-location { font-size: 0.78rem; color: var(–gold); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 8px; }
-.card-title { font-family: ‘Playfair Display’, serif; font-size: 1.1rem; font-weight: 600; color: var(–white); margin-bottom: 10px; line-height: 1.35; }
-.card-meta { display: flex; gap: 16px; font-size: 0.8rem; color: var(–muted); margin-bottom: 16px; }
-.card-meta span { display: flex; align-items: center; gap: 5px; }
-
-.card-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(201,151,58,0.1); padding-top: 16px; }
-.card-price { font-family: ‘Playfair Display’, serif; }
-.price-from { font-size: 0.72rem; color: var(–muted); display: block; }
-.price-val { font-size: 1.25rem; font-weight: 700; color: var(–gold); }
-.card-btn {
-background: var(–gold); color: var(–deep);
-padding: 9px 20px; border-radius: 50px;
-font-weight: 700; font-size: 0.82rem; text-decoration: none;
-transition: all 0.3s;
+.t-img-wrap { position: relative; overflow: hidden; }
+.t-img {
+  width: 100%; height: 210px; object-fit: cover;
+  transition: transform 0.45s ease; display: block;
 }
-.card-btn:hover { background: var(–gold-light); }
+.t-card:hover .t-img { transform: scale(1.06); }
 
-/* ── STARS ── */
-.stars { color: var(–gold); font-size: 0.8rem; }
+.t-badge {
+  position: absolute; top: 13px; left: 13px;
+  background: var(--amber); color: #fff;
+  padding: 4px 12px; border-radius: 30px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.5px;
+}
+.t-badge.green { background: #3a8a4a; }
+.t-badge.blue  { background: #2a6da8; }
 
-/* ── WHY US ── */
-.why { background: var(–dark); }
+.t-wishlist {
+  position: absolute; top: 13px; right: 13px;
+  background: rgba(0,0,0,0.45); border-radius: 50%;
+  width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; cursor: pointer; transition: all 0.25s; color: #fff; border: none;
+}
+.t-wishlist:hover { background: var(--amber); }
+
+.t-body { padding: 18px 20px; }
+.t-location { font-size: 0.75rem; color: var(--amber-lt); font-weight: 600; margin-bottom: 7px; letter-spacing: 0.3px; }
+.t-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 600; color: var(--white);
+  margin-bottom: 9px; line-height: 1.35;
+}
+.t-meta { display: flex; gap: 14px; font-size: 0.78rem; color: var(--muted); margin-bottom: 14px; flex-wrap: wrap; }
+.t-meta span { display: flex; align-items: center; gap: 4px; }
+.stars { color: var(--amber-lt); font-size: 0.78rem; }
+
+.t-desc {
+  font-size: 0.83rem; color: var(--muted); line-height: 1.65;
+  margin-bottom: 14px; font-weight: 300;
+}
+
+.t-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(212,130,26,0.1); padding-top: 14px;
+  gap: 10px;
+}
+.t-price {}
+.t-from { font-size: 0.7rem; color: var(--muted); display: block; }
+.t-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--amber-lt);
+}
+.t-val small { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
+
+.t-btn {
+  background: var(--amber); color: #fff;
+  padding: 9px 18px; border-radius: 30px;
+  font-size: 0.8rem; font-weight: 700;
+  transition: all 0.25s; white-space: nowrap;
+}
+.t-btn:hover { background: var(--amber-lt); transform: translateY(-1px); }
+.t-btn.wa { background: var(--wa-green); }
+.t-btn.wa:hover { background: #1fb855; }
+
+/* ═══════════════════════════════════════════
+   HABARANA ACTIVITIES SECTION
+═══════════════════════════════════════════ */
+.habarana-section { background: var(--forest); }
+
+/* ═══════════════════════════════════════════
+   FEATURED BANNER (village tour)
+═══════════════════════════════════════════ */
+.featured-banner {
+  background: var(--jungle);
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(212,130,26,0.15);
+  margin-bottom: 60px;
+}
+.fb-img {
+  width: 100%; height: 100%; min-height: 350px;
+  object-fit: cover; display: block;
+}
+.fb-body {
+  padding: 48px 44px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.fb-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(212,130,26,0.12); border: 1px solid rgba(212,130,26,0.25);
+  padding: 5px 14px; border-radius: 30px;
+  font-size: 0.7rem; font-weight: 600; color: var(--amber-lt);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px;
+  width: fit-content;
+}
+.fb-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700;
+  color: var(--white); line-height: 1.2; margin-bottom: 14px;
+}
+.fb-desc {
+  font-size: 0.92rem; color: var(--muted); line-height: 1.75;
+  margin-bottom: 24px; font-weight: 300;
+}
+.fb-includes {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;
+}
+.fb-tag-pill {
+  background: rgba(91,140,90,0.15); border: 1px solid rgba(91,140,90,0.3);
+  color: var(--sage); padding: 4px 12px; border-radius: 30px; font-size: 0.75rem;
+}
+.fb-footer { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.fb-price-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 700; color: var(--amber-lt);
+}
+.fb-price-note { font-size: 0.75rem; color: var(--muted); }
+
+/* ═══════════════════════════════════════════
+   ROUND TOURS
+═══════════════════════════════════════════ */
+.round-tours { background: var(--jungle); }
+
+.rt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rt-card {
+  background: var(--card);
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(212,130,26,0.12);
+  transition: all 0.35s;
+  display: flex; flex-direction: column;
+}
+.rt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border-color: rgba(212,130,26,0.3);
+}
+.rt-img { width: 100%; height: 180px; object-fit: cover; display: block; }
+
+.rt-body { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
+.rt-days {
+  display: inline-flex; align-items: center;
+  background: rgba(212,130,26,0.15); color: var(--amber-lt);
+  padding: 4px 12px; border-radius: 30px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+  margin-bottom: 10px; width: fit-content;
+}
+.rt-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 600; color: var(--white);
+  margin-bottom: 10px; line-height: 1.3;
+}
+.rt-stops {
+  list-style: none; margin-bottom: 14px;
+}
+.rt-stops li {
+  font-size: 0.8rem; color: var(--muted); padding: 3px 0;
+  display: flex; align-items: center; gap: 7px;
+}
+.rt-stops li::before { content: '→'; color: var(--amber); font-size: 0.75rem; }
+
+.rt-features { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+.rt-feat {
+  background: rgba(91,140,90,0.12); border: 1px solid rgba(91,140,90,0.25);
+  color: var(--sage); padding: 3px 10px; border-radius: 20px; font-size: 0.72rem;
+}
+.rt-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(212,130,26,0.1); padding-top: 14px; margin-top: auto;
+}
+.rt-price-range {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; font-weight: 700; color: var(--amber-lt);
+}
+.rt-price-note { font-size: 0.7rem; color: var(--muted); }
+
+.rt-custom {
+  background: linear-gradient(135deg, var(--moss) 0%, var(--jungle) 100%);
+  border: 2px dashed rgba(212,130,26,0.3);
+  border-radius: 18px; padding: 40px 30px;
+  text-align: center; grid-column: span 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; transition: all 0.3s;
+}
+.rt-custom:hover { border-color: var(--amber); transform: translateY(-4px); }
+.rt-custom-icon { font-size: 2.5rem; }
+.rt-custom-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 700; color: var(--white);
+}
+.rt-custom-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+
+/* ═══════════════════════════════════════════
+   WHY US
+═══════════════════════════════════════════ */
+.why { background: var(--forest); }
 
 .why-grid {
-display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-gap: 28px; margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
-
 .why-card {
-background: var(–card-bg); border-radius: 16px; padding: 32px 28px;
-border: 1px solid rgba(201,151,58,0.1); transition: all 0.3s;
+  background: var(--card); border-radius: 16px; padding: 30px 26px;
+  border: 1px solid rgba(212,130,26,0.1);
+  transition: all 0.3s;
 }
-.why-card:hover { border-color: var(–gold); transform: translateY(-3px); }
-.why-icon { font-size: 2.2rem; margin-bottom: 18px; display: block; }
-.why-title { font-family: ‘Playfair Display’, serif; font-size: 1.1rem; color: var(–white); font-weight: 600; margin-bottom: 10px; }
-.why-desc { font-size: 0.88rem; color: var(–muted); line-height: 1.7; }
+.why-card:hover { border-color: var(--amber); transform: translateY(-4px); }
+.why-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+.why-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; color: var(--white); font-weight: 600; margin-bottom: 9px;
+}
+.why-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
 
-/* ── TESTIMONIALS ── */
+/* ═══════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════ */
+.reviews { background: var(--jungle); }
+
 .testi-grid {
-display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 24px; margin-top: 16px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
 }
-
 .testi-card {
-background: var(–card-bg); border-radius: 16px; padding: 28px;
-border: 1px solid rgba(201,151,58,0.1);
+  background: var(--card); border-radius: 16px; padding: 28px;
+  border: 1px solid rgba(212,130,26,0.1);
+  transition: border-color 0.3s;
 }
-
-.testi-stars { color: var(–gold); font-size: 1rem; margin-bottom: 14px; }
-.testi-text { font-size: 0.92rem; color: var(–muted); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.testi-card:hover { border-color: rgba(212,130,26,0.25); }
+.testi-stars { color: var(--amber-lt); font-size: 0.95rem; margin-bottom: 13px; letter-spacing: 1px; }
+.testi-text {
+  font-size: 0.9rem; color: var(--muted); line-height: 1.78;
+  margin-bottom: 20px; font-style: italic; font-weight: 300;
+}
 .testi-author { display: flex; align-items: center; gap: 12px; }
-.testi-avatar {
-width: 44px; height: 44px; border-radius: 50%;
-background: var(–gold); display: flex; align-items: center; justify-content: center;
-font-weight: 700; font-size: 1rem; color: var(–deep);
+.testi-av {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--amber); display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; color: #fff; flex-shrink: 0;
 }
-.testi-name { font-weight: 600; font-size: 0.9rem; color: var(–white); }
-.testi-origin { font-size: 0.75rem; color: var(–muted); }
+.testi-name { font-weight: 600; font-size: 0.88rem; color: var(--white); }
+.testi-origin { font-size: 0.73rem; color: var(--muted); margin-top: 2px; }
 
-/* ── CTA ── */
-.cta-section {
-background:
-linear-gradient(135deg, rgba(13,27,30,0.9) 0%, rgba(20,36,40,0.85) 100%),
-url(‘https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=1400&q=80’) center/cover no-repeat;
-text-align: center; padding: 100px 6%;
-border-top: 1px solid rgba(201,151,58,0.15);
-border-bottom: 1px solid rgba(201,151,58,0.15);
+/* ═══════════════════════════════════════════
+   CTA STRIP
+═══════════════════════════════════════════ */
+.cta-strip {
+  background:
+    linear-gradient(135deg, rgba(26,46,26,0.88), rgba(36,56,36,0.92)),
+    url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1600&q=80') center/cover no-repeat;
+  text-align: center; padding: 90px 5%;
+  border-top: 1px solid rgba(212,130,26,0.15);
+  border-bottom: 1px solid rgba(212,130,26,0.15);
 }
+.cta-strip .sec-title { margin: 0 auto 14px; }
+.cta-strip .sec-sub { margin: 0 auto 34px; text-align: center; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-.cta-section .section-title { margin: 0 auto 16px; }
-.cta-section .section-sub { margin: 0 auto 36px; text-align: center; }
+.btn-itinerary {
+  background: transparent;
+  border: 1.5px solid rgba(212,130,26,0.5);
+  color: var(--amber-lt); padding: 14px 26px;
+  border-radius: 50px; font-weight: 600; font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.btn-itinerary:hover { background: rgba(212,130,26,0.1); border-color: var(--amber-lt); }
 
-/* ── FOOTER ── */
+/* ═══════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════ */
+.contact { background: var(--forest); }
+
+.contact-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; max-width: 920px;
+}
+.form-field { margin-bottom: 18px; }
+.form-field label {
+  font-size: 0.7rem; color: var(--amber-lt); letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 7px;
+}
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%; background: var(--card);
+  border: 1px solid rgba(212,130,26,0.18);
+  color: var(--sand); padding: 12px 15px;
+  border-radius: 10px; font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem; outline: none; transition: border 0.25s;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(157,175,158,0.5); }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { border-color: var(--amber); }
+.form-field select option { background: var(--forest); }
+.form-field textarea { resize: vertical; }
+
+.contact-sidebar > * + * { margin-top: 18px; }
+
+.c-info-card {
+  background: var(--card); border-radius: 14px; padding: 26px 24px;
+  border: 1px solid rgba(212,130,26,0.13);
+}
+.c-info-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; color: var(--white); font-weight: 600; margin-bottom: 16px;
+}
+.c-info-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; color: var(--muted); margin-bottom: 10px;
+  font-weight: 300;
+}
+.c-info-item a { color: var(--muted); transition: color 0.2s; }
+.c-info-item a:hover { color: var(--amber-lt); }
+.c-icon { font-size: 1rem; width: 20px; text-align: center; flex-shrink: 0; }
+
+.btn-submit {
+  width: 100%; background: var(--amber); color: #fff;
+  border: none; padding: 15px; border-radius: 50px;
+  font-weight: 700; font-size: 0.95rem; cursor: pointer;
+  font-family: 'Outfit', sans-serif; transition: all 0.3s;
+  letter-spacing: 0.3px;
+}
+.btn-submit:hover { background: var(--amber-lt); transform: translateY(-1px); box-shadow: 0 8px 24px var(--gold-glow); }
+
+.quick-contact-btns { display: flex; flex-direction: column; gap: 10px; }
+.qc-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 20px; border-radius: 50px;
+  font-weight: 700; font-size: 0.88rem; transition: all 0.25s;
+}
+.qc-btn.wa { background: var(--wa-green); color: #fff; }
+.qc-btn.wa:hover { background: #1fb855; }
+.qc-btn.call { background: var(--amber); color: #fff; }
+.qc-btn.call:hover { background: var(--amber-lt); }
+.qc-btn.email { background: var(--card2); color: var(--sand); border: 1px solid rgba(212,130,26,0.2); }
+.qc-btn.email:hover { border-color: var(--amber); color: var(--amber-lt); }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
 footer {
-background: var(–deep); padding: 60px 6% 30px;
-border-top: 1px solid rgba(201,151,58,0.15);
+  background: var(--jungle);
+  border-top: 1px solid rgba(212,130,26,0.12);
+  padding: 56px 5% 28px;
 }
-
 .footer-grid {
-display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-gap: 40px; margin-bottom: 50px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 44px;
 }
+.f-brand {}
+.f-brand .logo { font-size: 1.6rem; display: block; margin-bottom: 12px; }
+.f-brand p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; max-width: 240px; font-weight: 300; }
+.f-brand-contact { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.f-brand-contact a {
+  font-size: 0.82rem; color: var(--muted);
+  display: flex; align-items: center; gap: 7px; transition: color 0.2s;
+}
+.f-brand-contact a:hover { color: var(--amber-lt); }
 
-.footer-brand .logo { font-size: 1.5rem; display: block; margin-bottom: 14px; }
-.footer-brand p { font-size: 0.88rem; color: var(–muted); line-height: 1.7; max-width: 260px; }
-
-.footer-col h4 { font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; color: var(–gold); margin-bottom: 18px; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul li a { color: var(–muted); text-decoration: none; font-size: 0.88rem; transition: color 0.3s; }
-.footer-col ul li a:hover { color: var(–gold); }
+.f-col h4 {
+  font-weight: 700; font-size: 0.78rem; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 16px;
+}
+.f-col ul { list-style: none; }
+.f-col ul li { margin-bottom: 9px; }
+.f-col ul li a { color: var(--muted); font-size: 0.85rem; transition: color 0.2s; font-weight: 300; }
+.f-col ul li a:hover { color: var(--amber-lt); }
 
 .footer-bottom {
-border-top: 1px solid rgba(201,151,58,0.1);
-padding-top: 24px; display: flex;
-justify-content: space-between; align-items: center; flex-wrap: gap;
+  border-top: 1px solid rgba(212,130,26,0.1);
+  padding-top: 22px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 0.8rem; color: var(--muted); font-weight: 300; }
+
+.social-row { display: flex; gap: 10px; }
+.soc-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--card); border: 1px solid rgba(212,130,26,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 0.8rem; transition: all 0.25s;
+}
+.soc-btn:hover { background: var(--amber); color: #fff; border-color: var(--amber); }
+
+/* ═══════════════════════════════════════════
+   FLOATING WHATSAPP
+═══════════════════════════════════════════ */
+.float-wa {
+  position: fixed; bottom: 28px; right: 28px; z-index: 990;
+  background: var(--wa-green); color: #fff;
+  width: 60px; height: 60px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+  transition: all 0.3s;
+  animation: pulse-wa 2.5s ease-in-out infinite;
+}
+.float-wa:hover { background: #1fb855; transform: scale(1.1); box-shadow: 0 10px 36px rgba(37,211,102,0.6); }
+.float-wa-label {
+  position: absolute; right: 70px; background: var(--jungle);
+  color: var(--sand); padding: 6px 14px; border-radius: 8px;
+  font-size: 0.78rem; font-weight: 600; white-space: nowrap;
+  border: 1px solid rgba(212,130,26,0.2);
+  opacity: 0; transform: translateX(10px); transition: all 0.3s; pointer-events: none;
+}
+.float-wa:hover .float-wa-label { opacity: 1; transform: translateX(0); }
+
+@keyframes pulse-wa {
+  0%,100% { box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+  50%      { box-shadow: 0 6px 40px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.08); }
 }
 
-.footer-bottom p { font-size: 0.82rem; color: var(–muted); }
-
-.social-links { display: flex; gap: 12px; }
-.social-links a {
-width: 38px; height: 38px; border-radius: 50%;
-background: var(–card-bg); border: 1px solid rgba(201,151,58,0.2);
-display: flex; align-items: center; justify-content: center;
-color: var(–muted); text-decoration: none; font-size: 0.85rem;
-transition: all 0.3s;
-}
-.social-links a:hover { background: var(–gold); color: var(–deep); border-color: var(–gold); }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(30px); }
-to   { opacity: 1; transform: translateY(0); }
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .reveal {
-opacity: 0; transform: translateY(24px);
-transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0; transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.in { opacity: 1; transform: translateY(0); }
 
-/* ── MOBILE ── */
+.reveal-d1 { transition-delay: 0.05s; }
+.reveal-d2 { transition-delay: 0.12s; }
+.reveal-d3 { transition-delay: 0.19s; }
+.reveal-d4 { transition-delay: 0.26s; }
+.reveal-d5 { transition-delay: 0.33s; }
+.reveal-d6 { transition-delay: 0.40s; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .featured-banner { grid-template-columns: 1fr; }
+  .fb-img { height: 240px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .f-brand { grid-column: 1/-1; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
-.nav-links, .nav-cta { display: none; }
-.hamburger { display: flex; }
+  .topbar { display: none; }
+  .nav-links, .nav-right { display: none; }
+  .hamburger { display: flex; }
+  nav { padding: 14px 5%; }
 
-```
-.hero-stats { gap: 24px; }
-.stat-num { font-size: 1.4rem; }
+  .hero-content { padding: 100px 5% 60px; }
+  .hero-stats { gap: 0; overflow-x: auto; }
+  .stat-item { min-width: 100px; padding: 16px 0; }
 
-.search-box { flex-direction: column; }
-.search-btn { width: 100%; }
+  .search-box { flex-direction: column; padding: 20px; }
+  .search-go { width: 100%; padding: 13px; }
 
-.footer-grid { grid-template-columns: 1fr 1fr; }
-.footer-brand { grid-column: 1/-1; }
+  section { padding: 60px 5%; }
+  .sec-header-row { flex-direction: column; align-items: flex-start; }
 
-.hero-btns { flex-direction: column; }
-.btn-primary, .btn-secondary { text-align: center; }
-```
+  .fb-body { padding: 28px 22px; }
 
+  .footer-grid { grid-template-columns: 1fr; }
+  .f-brand { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .cta-btns { flex-direction: column; align-items: center; }
 }
 
 @media (max-width: 480px) {
-.footer-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.6rem; }
+  .hero-btns { flex-direction: column; }
+  .hero-btns a { text-align: center; }
+  .stat-item { padding: 14px 10px; }
+  .stat-num { font-size: 1.5rem; }
 }
 </style>
 
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ═══ TOP CONTACT BAR ═══ -->
 
-<nav>
-  <a href="#" class="logo">Cylo<span>Tours</span></a>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:+94720176037">📞 +94 720 176 037</a>
+    <a href="mailto:cylotours@gmail.com">✉️ cylotours@gmail.com</a>
+    <span>📍 Habarana, Sri Lanka</span>
+    <span>🕐 Open Daily 7am–9pm</span>
+  </div>
+  <div class="topbar-right">
+    <a href="https://wa.me/94720176037?text=Hello!%20I%20want%20to%20inquire%20about%20your%20best%20prices." class="topbar-btn wa">💬 WhatsApp for Best Price</a>
+    <a href="tel:+94720176037" class="topbar-btn call">📞 Call Now</a>
+  </div>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+
+<nav id="mainNav">
+  <a href="#" class="logo">Cylo<span>Tours</span><sup>® Sri Lanka</sup></a>
   <ul class="nav-links">
-    <li><a href="#tours">Tours</a></li>
-    <li><a href="#categories">Experiences</a></li>
-    <li><a href="#why">About Us</a></li>
+    <li><a href="#habarana">Habarana</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#round-tours">Round Tours</a></li>
+    <li><a href="#why">About</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Book Now</a>
-  <div class="hamburger" onclick="toggleMenu()">
+  <div class="nav-right">
+    <a href="https://wa.me/94720176037?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20tours." class="nav-wa">💬 WhatsApp Us</a>
+    <a href="#contact" class="nav-book">Book Now →</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="openMobile()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══ MOBILE MENU ═══ -->
 
-<section class="hero">
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobile()">✕</button>
+  <a href="#habarana" onclick="closeMobile()">Habarana Activities</a>
+  <a href="#activities" onclick="closeMobile()">All Experiences</a>
+  <a href="#round-tours" onclick="closeMobile()">Round Tours</a>
+  <a href="#why" onclick="closeMobile()">Why Cylo Tours</a>
+  <a href="#reviews" onclick="closeMobile()">Reviews</a>
+  <a href="#contact" onclick="closeMobile()">Contact & Book</a>
+  <div class="mobile-menu-btns">
+    <a href="https://wa.me/94720176037" class="qc-btn wa" style="flex:1;">💬 WhatsApp</a>
+    <a href="tel:+94720176037" class="qc-btn call" style="flex:1;">📞 Call Now</a>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-badge">✦ Sri Lanka's Premier Tour Company</div>
-    <h1>Discover the <em>Soul</em> of Sri Lanka</h1>
-    <p>From ancient kingdoms to wild safaris, pristine beaches to misty highlands — Cylo Tours crafts unforgettable journeys across the Pearl of the Indian Ocean.</p>
+    <div class="hero-eyebrow">✦ #1 Rated Tours in Habarana, Sri Lanka</div>
+    <h1>Discover <em>Wild</em><br>Habarana &<br>Sri Lanka</h1>
+    <div class="hero-tagline">Safaris · Village Life · Ancient Wonders</div>
+    <p>From thundering elephant gatherings to ancient cave temples, serene village life and epic rock fortresses — Cylo Tours brings you the real Sri Lanka. Safe drivers. Best prices. Unforgettable memories.</p>
     <div class="hero-btns">
-      <a href="#tours" class="btn-primary">Explore Tours</a>
-      <a href="#contact" class="btn-secondary">Talk to an Expert</a>
+      <a href="#activities" class="btn-primary">🐘 Explore Activities</a>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20a%20tour%20in%20Habarana." class="btn-wa">💬 WhatsApp for Best Price</a>
+      <a href="#round-tours" class="btn-ghost">Sri Lanka Round Tours</a>
     </div>
   </div>
   <div class="hero-stats">
     <div class="stat-item">
-      <span class="stat-num">500+</span>
+      <span class="stat-num">800+</span>
       <span class="stat-label">Happy Tourists</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">30+</span>
+      <span class="stat-num">4.9★</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40+</span>
       <span class="stat-label">Tour Packages</span>
     </div>
     <div class="stat-item">
-      <span class="stat-num">4.9★</span>
-      <span class="stat-label">Average Rating</span>
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Years Experience</span>
     </div>
   </div>
 </section>
 
-<!-- SEARCH -->
+<!-- ═══ SEARCH ═══ -->
 
-<div class="search-section">
+<div class="search-wrap">
   <div class="search-box reveal">
-    <div class="search-field">
+    <div class="s-field">
       <label>Destination</label>
       <select>
-        <option>All Sri Lanka</option>
-        <option>Sigiriya & Dambulla</option>
+        <option>Habarana & Surrounds</option>
+        <option>Sigiriya</option>
+        <option>Dambulla</option>
         <option>Polonnaruwa</option>
+        <option>Minneriya / Kaudulla</option>
         <option>Kandy</option>
         <option>Ella & Hill Country</option>
-        <option>Mirissa & South Coast</option>
         <option>Yala National Park</option>
+        <option>Mirissa South Coast</option>
         <option>Nuwara Eliya</option>
-        <option>Galle</option>
+        <option>Galle Fort</option>
+        <option>All Sri Lanka</option>
       </select>
     </div>
-    <div class="search-field">
-      <label>Tour Type</label>
+    <div class="s-field">
+      <label>Experience Type</label>
       <select>
         <option>All Types</option>
-        <option>Wildlife Safari</option>
+        <option>Jeep Safari</option>
+        <option>Village Tour</option>
         <option>Cultural & Heritage</option>
-        <option>Beach & Water</option>
-        <option>Adventure</option>
-        <option>Photography Tours</option>
-        <option>Ayurveda & Wellness</option>
+        <option>Cooking Class</option>
+        <option>Nature Walk</option>
+        <option>Boat Safari</option>
+        <option>Photography Tour</option>
+        <option>Round Tour</option>
       </select>
     </div>
-    <div class="search-field">
+    <div class="s-field">
       <label>Duration</label>
       <select>
         <option>Any Duration</option>
-        <option>Half Day</option>
+        <option>Half Day (3–4 hrs)</option>
         <option>Full Day</option>
         <option>2–3 Days</option>
         <option>4–7 Days</option>
-        <option>7+ Days</option>
+        <option>7–10 Days</option>
+        <option>10+ Days</option>
       </select>
     </div>
-    <div class="search-field">
+    <div class="s-field">
       <label>Travel Date</label>
       <input type="date">
     </div>
-    <button class="search-btn">🔍 Search Tours</button>
+    <button class="search-go" onclick="document.getElementById('activities').scrollIntoView({behavior:'smooth'})">🔍 Find Tours</button>
   </div>
 </div>
 
-<!-- CATEGORIES -->
+<!-- ═══ HABARANA HIGHLIGHTS ═══ -->
 
-<section class="categories" id="categories">
-  <div class="section-label">Browse by Experience</div>
-  <div class="section-title">What Kind of Adventure <br>Are You Looking For?</div>
-  <div class="cat-grid reveal">
-    <a href="#tours" class="cat-card"><span class="cat-icon">🐘</span><div class="cat-name">Wildlife Safari</div><div class="cat-count">8 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🏛️</span><div class="cat-name">Ancient Cities</div><div class="cat-count">6 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🏖️</span><div class="cat-name">Beach & Coast</div><div class="cat-count">5 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🌿</span><div class="cat-name">Tea Country</div><div class="cat-count">4 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🧘</span><div class="cat-name">Wellness</div><div class="cat-count">3 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">📸</span><div class="cat-name">Photography</div><div class="cat-count">4 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🚂</span><div class="cat-name">Scenic Trains</div><div class="cat-count">2 Tours</div></a>
-    <a href="#tours" class="cat-card"><span class="cat-icon">🌊</span><div class="cat-name">Water Sports</div><div class="cat-count">3 Tours</div></a>
+<section class="highlights" id="habarana">
+  <div class="sec-header-row">
+    <div>
+      <div class="sec-eyebrow">Things to Do in Habarana</div>
+      <div class="sec-title">Browse by <em>Experience</em></div>
+    </div>
+    <a href="#activities" class="btn-ghost" style="font-size:0.85rem;padding:10px 20px;">View All →</a>
+  </div>
+  <div class="hl-grid reveal">
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🐘</div>
+      <div class="hl-name">Elephant Safari</div>
+      <div class="hl-count">3 Experiences</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🏯</div>
+      <div class="hl-name">Sigiriya Rock</div>
+      <div class="hl-count">2 Tours</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🛶</div>
+      <div class="hl-name">Village Tour</div>
+      <div class="hl-count">4 Experiences</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🍛</div>
+      <div class="hl-name">Cooking Class</div>
+      <div class="hl-count">2 Classes</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🦚</div>
+      <div class="hl-name">Nature Walk</div>
+      <div class="hl-count">3 Walks</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">⛪</div>
+      <div class="hl-name">Dambulla Cave</div>
+      <div class="hl-count">2 Tours</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🚵</div>
+      <div class="hl-name">Cycling Tours</div>
+      <div class="hl-count">2 Rides</div>
+    </a>
+    <a href="#activities" class="hl-card">
+      <div class="hl-icon">🌅</div>
+      <div class="hl-name">Sunrise Tours</div>
+      <div class="hl-count">2 Tours</div>
+    </a>
   </div>
 </section>
 
-<!-- TOURS -->
+<!-- ═══ MAIN ACTIVITIES ═══ -->
 
-<section id="tours">
-  <div class="section-label">Most Popular</div>
-  <div class="section-title">Top Tour Packages</div>
-  <div class="section-sub">Hand-picked experiences crafted by our local expert guides for the ultimate Sri Lanka adventure.</div>
+<section class="habarana-section" id="activities">
+  <div class="sec-eyebrow">Best Prices in Habarana</div>
+  <div class="sec-title">Top Activities &amp; <em>Experiences</em></div>
+  <div class="sec-sub">Hand-picked by local experts. All prices include transport and guide. No hidden fees — ever.</div>
 
-  <div class="tours-grid reveal">
+  <!-- FEATURED: HIRIWADUNNA VILLAGE TOUR -->
+
+  <div class="featured-banner reveal">
+    <img class="fb-img" src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=800&q=80" alt="Hiriwadunna Village Tour Habarana" loading="lazy">
+    <div class="fb-body">
+      <div class="fb-tag">⭐ #1 Most Booked in Habarana</div>
+      <div class="fb-title">Hiriwadunna Village Tour — Authentic Sri Lankan Rural Life</div>
+      <div class="fb-desc">Step into a world untouched by time. Paddle a traditional canoe across Hiriwadunna lake, plough rice fields with water buffaloes, squeeze fresh coconut milk and share a home-cooked Sri Lankan lunch with a local family. The most authentic cultural experience in all of Habarana.</div>
+      <div class="fb-includes">
+        <span class="fb-tag-pill">🛶 Canoe Ride</span>
+        <span class="fb-tag-pill">🐃 Buffalo Ploughing</span>
+        <span class="fb-tag-pill">🥥 Coconut Tasting</span>
+        <span class="fb-tag-pill">🍛 Village Lunch</span>
+        <span class="fb-tag-pill">🌿 Herb Garden Walk</span>
+        <span class="fb-tag-pill">👨‍🌾 Local Guide</span>
+      </div>
+      <div class="fb-footer">
+        <div>
+          <div class="fb-price-note">From only</div>
+          <div class="fb-price-val">$18 <small style="font-size:0.85rem;color:var(--muted)">/ person</small></div>
+        </div>
+        <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Hiriwadunna%20Village%20Tour." class="btn-wa">💬 Book via WhatsApp</a>
+        <a href="#contact" class="btn-primary">Get Best Price →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARDS GRID -->
+
+  <div class="tours-grid">
 
 ```
-<!-- Card 1 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?w=600&q=80" alt="Sigiriya Rock Fortress">
-    <span class="card-badge">Best Seller</span>
+<!-- 1. Elephant Gathering Safari -->
+<div class="t-card reveal reveal-d1">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80" alt="Elephant Gathering Safari Minneriya" loading="lazy">
+    <span class="t-badge">🔥 Best Seller</span>
+    <button class="t-wishlist" title="Save">♡</button>
   </div>
-  <div class="card-body">
-    <div class="card-location">📍 Sigiriya, Central Province</div>
-    <div class="card-title">Sigiriya Rock Fortress & Dambulla Cave Temple</div>
-    <div class="card-meta">
-      <span>🕐 Full Day</span>
-      <span>👥 Up to 12</span>
-      <span class="stars">★★★★★</span>
-    </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$45 USD</span>
-      </div>
-      <a href="#contact" class="card-btn">Book Now</a>
-    </div>
-  </div>
-</div>
-
-<!-- Card 2 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80" alt="Yala Safari">
-    <span class="card-badge">Wildlife</span>
-  </div>
-  <div class="card-body">
-    <div class="card-location">📍 Yala National Park</div>
-    <div class="card-title">Yala National Park Safari – Leopard & Elephant Spotting</div>
-    <div class="card-meta">
-      <span>🕐 Full Day</span>
+  <div class="t-body">
+    <div class="t-location">📍 Minneriya / Kaudulla National Park</div>
+    <div class="t-title">Elephant Gathering Jeep Safari</div>
+    <div class="t-meta">
+      <span>🕐 3–4 Hours</span>
       <span>👥 Up to 6</span>
       <span class="stars">★★★★★</span>
     </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$70 USD</span>
+    <div class="t-desc">Witness one of Asia's greatest wildlife spectacles — hundreds of wild elephants gathering at Minneriya tank. Open-top jeep, expert naturalist guide. Unforgettable.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$22 <small>/person</small></span>
       </div>
-      <a href="#contact" class="card-btn">Book Now</a>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Elephant%20Gathering%20Safari." class="t-btn wa">💬 Book Now</a>
     </div>
   </div>
 </div>
 
-<!-- Card 3 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&q=80" alt="Kandy">
-    <span class="card-badge">Cultural</span>
+<!-- 2. Sigiriya Rock Fortress -->
+<div class="t-card reveal reveal-d2">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.unsplash.com/photo-1599945959604-42c1ddc7e329?w=600&q=80" alt="Sigiriya Rock Fortress Tour" loading="lazy">
+    <span class="t-badge green">UNESCO Heritage</span>
+    <button class="t-wishlist" title="Save">♡</button>
   </div>
-  <div class="card-body">
-    <div class="card-location">📍 Kandy, Central Province</div>
-    <div class="card-title">Kandy City Tour – Temple of the Tooth & Cultural Show</div>
-    <div class="card-meta">
-      <span>🕐 Full Day</span>
+  <div class="t-body">
+    <div class="t-location">📍 Sigiriya, North Central Province</div>
+    <div class="t-title">Sigiriya Rock Fortress — 5th Century Marvel</div>
+    <div class="t-meta">
+      <span>🕐 Half Day</span>
+      <span>👥 Up to 12</span>
+      <span class="stars">★★★★★</span>
+    </div>
+    <div class="t-desc">Climb the legendary Lion Rock fortress, admire ancient frescoes and water gardens. One of Sri Lanka's most iconic UNESCO World Heritage Sites — a must-see from Habarana.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$28 <small>/person</small></span>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Sigiriya%20Rock%20Tour." class="t-btn">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Dambulla Cave Temple -->
+<div class="t-card reveal reveal-d3">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Dambulla Cave Temple Tour" loading="lazy">
+    <span class="t-badge green">UNESCO Heritage</span>
+    <button class="t-wishlist" title="Save">♡</button>
+  </div>
+  <div class="t-body">
+    <div class="t-location">📍 Dambulla, 22 km from Habarana</div>
+    <div class="t-title">Dambulla Cave Temple — Golden Temple Tour</div>
+    <div class="t-meta">
+      <span>🕐 Half Day</span>
       <span>👥 Up to 15</span>
-      <span class="stars">★★★★☆</span>
-    </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$38 USD</span>
-      </div>
-      <a href="#contact" class="card-btn">Book Now</a>
-    </div>
-  </div>
-</div>
-
-<!-- Card 4 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1604995215588-53a5d31c2bb4?w=600&q=80" alt="Ella Train">
-    <span class="card-badge">Scenic</span>
-  </div>
-  <div class="card-body">
-    <div class="card-location">📍 Ella, Uva Province</div>
-    <div class="card-title">Ella Hill Country – Nine Arch Bridge & Little Adam's Peak</div>
-    <div class="card-meta">
-      <span>🕐 Full Day</span>
-      <span>👥 Up to 10</span>
       <span class="stars">★★★★★</span>
     </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$55 USD</span>
+    <div class="t-desc">Explore 5 magnificent cave temples with over 150 Buddhist statues and stunning ceiling frescoes dating back 2,000 years. A spiritual and artistic wonder not to be missed.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$22 <small>/person</small></span>
       </div>
-      <a href="#contact" class="card-btn">Book Now</a>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Dambulla%20Cave%20Temple%20Tour." class="t-btn">Book Now</a>
     </div>
   </div>
 </div>
 
-<!-- Card 5 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="Beach Sri Lanka">
-    <span class="card-badge">Beach</span>
+<!-- 4. Cooking Class -->
+<div class="t-card reveal reveal-d4">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg?auto=compress&cs=tinysrgb&w=600&q=80" alt="Sri Lankan Cooking Class Habarana" loading="lazy">
+    <span class="t-badge" style="background:#7B4A2D;">Hands-On</span>
+    <button class="t-wishlist" title="Save">♡</button>
   </div>
-  <div class="card-body">
-    <div class="card-location">📍 Mirissa, Southern Province</div>
-    <div class="card-title">Mirissa Whale Watching & Beach Day</div>
-    <div class="card-meta">
-      <span>🕐 Full Day</span>
-      <span>👥 Up to 20</span>
+  <div class="t-body">
+    <div class="t-location">📍 Local Home, Habarana Village</div>
+    <div class="t-title">Traditional Sri Lankan Cooking Class</div>
+    <div class="t-meta">
+      <span>🕐 3 Hours</span>
+      <span>👥 Up to 8</span>
       <span class="stars">★★★★★</span>
     </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$65 USD</span>
+    <div class="t-desc">Learn to cook authentic Sri Lankan curries, roti and sambols from a local home cook. Visit the spice garden, grind fresh coconut, and feast on what you make. A true taste of Sri Lanka.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$24 <small>/person</small></span>
       </div>
-      <a href="#contact" class="card-btn">Book Now</a>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20a%20Cooking%20Class%20in%20Habarana." class="t-btn wa">💬 Book Now</a>
     </div>
   </div>
 </div>
 
-<!-- Card 6 -->
-<div class="tour-card">
-  <div class="card-img-wrap">
-    <img class="card-img" src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=600&q=80" alt="Polonnaruwa">
-    <span class="card-badge">Heritage</span>
+<!-- 5. Polonnaruwa -->
+<div class="t-card reveal reveal-d5">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.unsplash.com/photo-1629026680750-a7f2bcb45c8b?w=600&q=80" alt="Polonnaruwa Ancient City Tour" loading="lazy">
+    <span class="t-badge blue">Ancient Kingdom</span>
+    <button class="t-wishlist" title="Save">♡</button>
   </div>
-  <div class="card-body">
-    <div class="card-location">📍 Polonnaruwa, North Central</div>
-    <div class="card-title">Polonnaruwa Ancient Kingdom – Full Heritage Tour</div>
-    <div class="card-meta">
+  <div class="t-body">
+    <div class="t-location">📍 Polonnaruwa, 55 km from Habarana</div>
+    <div class="t-title">Polonnaruwa Ancient Kingdom — Full Day Heritage Tour</div>
+    <div class="t-meta">
       <span>🕐 Full Day</span>
       <span>👥 Up to 12</span>
       <span class="stars">★★★★★</span>
     </div>
-    <div class="card-footer">
-      <div class="card-price">
-        <span class="price-from">From</span>
-        <span class="price-val">$40 USD</span>
+    <div class="t-desc">Cycle through the medieval ruins of Sri Lanka's 2nd ancient capital. See towering Buddha statues, royal palaces and sacred dagobas. Best explored by bicycle for the full experience.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$32 <small>/person</small></span>
       </div>
-      <a href="#contact" class="card-btn">Book Now</a>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Polonnaruwa%20Heritage%20Tour." class="t-btn">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Nature Walk -->
+<div class="t-card reveal reveal-d6">
+  <div class="t-img-wrap">
+    <img class="t-img" src="https://images.pexels.com/photos/1477101/pexels-photo-1477101.jpeg?auto=compress&cs=tinysrgb&w=600&q=80" alt="Nature Walk Bird Watching Habarana" loading="lazy">
+    <span class="t-badge green">Eco Tour</span>
+    <button class="t-wishlist" title="Save">♡</button>
+  </div>
+  <div class="t-body">
+    <div class="t-location">📍 Habarana Forest Reserve</div>
+    <div class="t-title">Habarana Nature Walk &amp; Bird Watching</div>
+    <div class="t-meta">
+      <span>🕐 2–3 Hours</span>
+      <span>👥 Up to 10</span>
+      <span class="stars">★★★★☆</span>
+    </div>
+    <div class="t-desc">Walk through lush jungle trails with a local naturalist guide. Spot rare birds, endemic butterflies, monitor lizards and if lucky, wild leopards in the early morning hours.</div>
+    <div class="t-footer">
+      <div class="t-price">
+        <span class="t-from">From</span>
+        <span class="t-val">$14 <small>/person</small></span>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%20Habarana%20Nature%20Walk." class="t-btn">Book Now</a>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- VIEW MORE CTA -->
+
+  <div style="text-align:center;margin-top:44px;" class="reveal">
+    <p style="color:var(--muted);font-size:0.9rem;margin-bottom:16px;">Looking for something not listed? We create bespoke experiences for every traveller.</p>
+    <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20a%20free%20itinerary%20for%20Habarana." class="btn-primary">✉️ Get Your Free Itinerary</a>
+  </div>
+</section>
+
+<!-- ═══ ROUND TOURS ═══ -->
+
+<section class="round-tours" id="round-tours">
+  <div class="sec-eyebrow">Sri Lanka Private Round Tours</div>
+  <div class="sec-title">Explore All of <em>Sri Lanka</em></div>
+  <div class="sec-sub">Private vehicles, professional English-speaking drivers, flexible itineraries. We cover the whole island — your way, your pace.</div>
+
+  <div class="rt-grid">
+
+```
+<!-- 3-Day -->
+<div class="rt-card reveal reveal-d1">
+  <img class="rt-img" src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80" alt="3 Day Sri Lanka Tour" loading="lazy">
+  <div class="rt-body">
+    <div class="rt-days">⏱ 3 Days · 2 Nights</div>
+    <div class="rt-title">Cultural Triangle Express</div>
+    <ul class="rt-stops">
+      <li>Sigiriya Rock Fortress</li>
+      <li>Dambulla Cave Temple</li>
+      <li>Polonnaruwa Ancient City</li>
+      <li>Habarana Elephant Safari</li>
+    </ul>
+    <div class="rt-features">
+      <span class="rt-feat">🚗 Private Car/Van</span>
+      <span class="rt-feat">🏨 Hotel Options</span>
+      <span class="rt-feat">👨‍✈️ Pro Driver</span>
+    </div>
+    <div class="rt-footer">
+      <div>
+        <div class="rt-price-note">From</div>
+        <div class="rt-price-range">$185 <small style="font-size:0.8rem;color:var(--muted)">/person</small></div>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%203-Day%20Sri%20Lanka%20Tour." class="t-btn wa" style="font-size:0.78rem;padding:8px 14px;">💬 Enquire</a>
+    </div>
+  </div>
+</div>
+
+<!-- 5-Day -->
+<div class="rt-card reveal reveal-d2">
+  <img class="rt-img" src="https://images.unsplash.com/photo-1567527890966-2a1faf152bdb?w=600&q=80" alt="5 Day Sri Lanka Tour" loading="lazy">
+  <div class="rt-body">
+    <div class="rt-days">⏱ 5 Days · 4 Nights</div>
+    <div class="rt-title">Highlands &amp; Culture Discovery</div>
+    <ul class="rt-stops">
+      <li>Sigiriya + Dambulla</li>
+      <li>Kandy — Temple of the Tooth</li>
+      <li>Nuwara Eliya Tea Plantations</li>
+      <li>Ella — Nine Arch Bridge</li>
+      <li>Yala or Udawalawe Safari</li>
+    </ul>
+    <div class="rt-features">
+      <span class="rt-feat">🚗 Private Car/Van</span>
+      <span class="rt-feat">🏨 3★–4★ Hotels</span>
+      <span class="rt-feat">🗺️ Custom Route</span>
+    </div>
+    <div class="rt-footer">
+      <div>
+        <div class="rt-price-note">From</div>
+        <div class="rt-price-range">$280 <small style="font-size:0.8rem;color:var(--muted)">/person</small></div>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%205-Day%20Sri%20Lanka%20Tour." class="t-btn wa" style="font-size:0.78rem;padding:8px 14px;">💬 Enquire</a>
+    </div>
+  </div>
+</div>
+
+<!-- 7-Day -->
+<div class="rt-card reveal reveal-d3">
+  <img class="rt-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="7 Day Sri Lanka Tour" loading="lazy">
+  <div class="rt-body">
+    <div class="rt-days">⏱ 7 Days · 6 Nights</div>
+    <div class="rt-title">Complete Sri Lanka Highlights</div>
+    <ul class="rt-stops">
+      <li>Habarana + Polonnaruwa</li>
+      <li>Sigiriya + Dambulla</li>
+      <li>Kandy + Peradeniya Gardens</li>
+      <li>Ella + Adam's Peak</li>
+      <li>Galle Fort</li>
+      <li>Mirissa Beach &amp; Whale Watching</li>
+    </ul>
+    <div class="rt-features">
+      <span class="rt-feat">🚌 AC Minivan</span>
+      <span class="rt-feat">🏨 4★ Hotels</span>
+      <span class="rt-feat">🛡️ Safe &amp; Reliable</span>
+      <span class="rt-feat">📱 24/7 Support</span>
+    </div>
+    <div class="rt-footer">
+      <div>
+        <div class="rt-price-note">From</div>
+        <div class="rt-price-range">$420 <small style="font-size:0.8rem;color:var(--muted)">/person</small></div>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%207-Day%20Sri%20Lanka%20Tour." class="t-btn wa" style="font-size:0.78rem;padding:8px 14px;">💬 Enquire</a>
+    </div>
+  </div>
+</div>
+
+<!-- 10-Day -->
+<div class="rt-card reveal reveal-d4">
+  <img class="rt-img" src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&q=80" alt="10 Day Sri Lanka Tour" loading="lazy">
+  <div class="rt-body">
+    <div class="rt-days">⏱ 10 Days · 9 Nights</div>
+    <div class="rt-title">Ultimate Sri Lanka Grand Tour</div>
+    <ul class="rt-stops">
+      <li>Negombo → Habarana</li>
+      <li>Sigiriya + Dambulla + Polonnaruwa</li>
+      <li>Kandy → Tea Country</li>
+      <li>Nuwara Eliya + Ella + Ravana Falls</li>
+      <li>Yala Safari (2 game drives)</li>
+      <li>South Coast: Galle + Mirissa</li>
+      <li>Whale Watching + Beach Day</li>
+    </ul>
+    <div class="rt-features">
+      <span class="rt-feat">🚌 Luxury Minivan</span>
+      <span class="rt-feat">🏨 4★–5★ Hotels</span>
+      <span class="rt-feat">🎒 Full Assistance</span>
+      <span class="rt-feat">📷 Photo Stops</span>
+    </div>
+    <div class="rt-footer">
+      <div>
+        <div class="rt-price-note">From</div>
+        <div class="rt-price-range">$620 <small style="font-size:0.8rem;color:var(--muted)">/person</small></div>
+      </div>
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20the%2010-Day%20Grand%20Tour." class="t-btn wa" style="font-size:0.78rem;padding:8px 14px;">💬 Enquire</a>
+    </div>
+  </div>
+</div>
+
+<!-- Custom -->
+<div class="rt-custom reveal reveal-d5">
+  <div class="rt-custom-icon">🗺️</div>
+  <div class="rt-custom-title">Build Your Own Tour</div>
+  <div class="rt-custom-desc">Tell us your travel dates, budget and dream destinations. We'll design a fully personalized Sri Lanka itinerary — any duration, any style, any budget. 100% flexible.</div>
+  <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20a%20custom%20Sri%20Lanka%20round%20tour%20itinerary." class="btn-primary" style="margin-top:6px;">💬 Get Free Custom Itinerary</a>
+  <a href="mailto:cylotours@gmail.com" class="btn-ghost" style="font-size:0.85rem;padding:10px 22px;">✉️ Email Us Your Requirements</a>
+</div>
+```
+
+  </div>
+
+  <!-- Transport options note -->
+
+  <div style="background:var(--card);border-radius:14px;padding:28px 30px;border:1px solid rgba(212,130,26,0.15);margin-top:40px;display:flex;gap:30px;flex-wrap:wrap;align-items:center;" class="reveal">
+    <div style="flex:1;min-width:220px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:8px;">🚗 Vehicle Options</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;font-weight:300;">Sedan car (1–3 pax) · SUV/Jeep (1–4 pax) · KDH Minivan (5–12 pax) · Coach (12–45 pax). All vehicles are air-conditioned, insured and well-maintained.</p>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:8px;">🛡️ Our Safety Promise</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;font-weight:300;">All our drivers are licensed, experienced and vetted. We monitor every trip. Your safety and comfort is our highest priority on every single journey across Sri Lanka.</p>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:8px;">🏨 Hotel Partnerships</div>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;font-weight:300;">We work with trusted 3★–5★ eco lodges, boutique hotels and luxury resorts across Sri Lanka to find the best options within your budget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CYLO TOURS ═══ -->
+
+<section class="why" id="why">
+  <div class="sec-eyebrow">Why Choose Us</div>
+  <div class="sec-title">Safe. Professional. <em>Affordable.</em></div>
+  <div class="sec-sub">We're local Sri Lankans who know this island like the back of our hand. When you travel with Cylo Tours, you're in safe hands — and great company.</div>
+  <div class="why-grid">
+    <div class="why-card reveal reveal-d1">
+      <span class="why-icon">🧭</span>
+      <div class="why-title">Expert Local Knowledge</div>
+      <div class="why-desc">Born and raised in the Cultural Triangle of Sri Lanka, our guides offer insights no guidebook can match — hidden viewpoints, secret trails, local legends and real stories.</div>
+    </div>
+    <div class="why-card reveal reveal-d2">
+      <span class="why-icon">💰</span>
+      <div class="why-title">Best Prices Guaranteed</div>
+      <div class="why-desc">We offer the most competitive, transparent pricing for activities in and around Habarana. No hidden fees, no add-ons. Found cheaper? We'll beat it.</div>
+    </div>
+    <div class="why-card reveal reveal-d3">
+      <span class="why-icon">🛡️</span>
+      <div class="why-title">Safe &amp; Reliable Drivers</div>
+      <div class="why-desc">All vehicles are insured, air-conditioned and regularly serviced. Our drivers are professional, punctual and English-speaking. Your safety is our first priority.</div>
+    </div>
+    <div class="why-card reveal reveal-d4">
+      <span class="why-icon">⚡</span>
+      <div class="why-title">Instant WhatsApp Replies</div>
+      <div class="why-desc">We respond within minutes on WhatsApp. No waiting 24–48 hours for emails — just fast, friendly answers and instant booking confirmation.</div>
+    </div>
+    <div class="why-card reveal reveal-d5">
+      <span class="why-icon">🎯</span>
+      <div class="why-title">Fully Customizable Tours</div>
+      <div class="why-desc">Every traveller is different. Tell us your interests, travel dates and budget and we'll design the perfect Habarana or Sri Lanka itinerary just for you.</div>
+    </div>
+    <div class="why-card reveal reveal-d6">
+      <span class="why-icon">🌿</span>
+      <div class="why-title">Responsible Eco-Tourism</div>
+      <div class="why-desc">We promote sustainable travel, support local communities and follow ethical wildlife guidelines. When you travel with us, you make a positive impact on Sri Lanka.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+
+<section class="reviews" id="reviews">
+  <div class="sec-eyebrow">Real Reviews · Real Travellers</div>
+  <div class="sec-title">What Our Guests <em>Say</em></div>
+  <div class="sec-sub">Don't take our word for it. Here's what real travellers from around the world say about their Cylo Tours experience.</div>
+  <div class="testi-grid">
+
+```
+<div class="testi-card reveal reveal-d1">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"The Hiriwadunna village tour was the highlight of our entire Sri Lanka trip. Our guide was fantastic, the canoe ride was magical and the village lunch was the best food we had in weeks. Absolutely genuine experience — book this immediately!"</div>
+  <div class="testi-author">
+    <div class="testi-av">S</div>
+    <div>
+      <div class="testi-name">Sarah Mitchell</div>
+      <div class="testi-origin">🇬🇧 United Kingdom · Google Review</div>
+    </div>
+  </div>
+</div>
+
+<div class="testi-card reveal reveal-d2">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"We saw over 200 elephants at Minneriya — it was beyond anything I'd ever imagined. The jeep and guide were superb. Cylo Tours organised everything perfectly and the price was unbelievably good compared to other operators."</div>
+  <div class="testi-author">
+    <div class="testi-av">M</div>
+    <div>
+      <div class="testi-name">Marco Bianchi</div>
+      <div class="testi-origin">🇮🇹 Italy · TripAdvisor Review</div>
+    </div>
+  </div>
+</div>
+
+<div class="testi-card reveal reveal-d3">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"Best tour company in Habarana, no question. Transparent pricing, always on time, professional drivers and incredibly knowledgeable guides. Our 7-day round tour was flawless. Will absolutely book again for our next visit to Sri Lanka."</div>
+  <div class="testi-author">
+    <div class="testi-av">A</div>
+    <div>
+      <div class="testi-name">Aiko Tanaka</div>
+      <div class="testi-origin">🇯🇵 Japan · Google Review</div>
+    </div>
+  </div>
+</div>
+
+<div class="testi-card reveal reveal-d4">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"I contacted Cylo Tours on WhatsApp at 9pm and had my full itinerary by 9:30pm with the best price I found anywhere online. Our driver Roshan was brilliant — punctual, friendly and went above and beyond the whole trip. Highly recommend!"</div>
+  <div class="testi-author">
+    <div class="testi-av">L</div>
+    <div>
+      <div class="testi-name">Lucas Herrera</div>
+      <div class="testi-origin">🇩🇪 Germany · Google Review</div>
+    </div>
+  </div>
+</div>
+
+<div class="testi-card reveal reveal-d5">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"The cooking class was absolutely incredible. We learned so much and the food was amazing. Such a personal, authentic experience in a local home. 10/10 would recommend to every traveller visiting Habarana — one of the best things we've ever done!"</div>
+  <div class="testi-author">
+    <div class="testi-av">E</div>
+    <div>
+      <div class="testi-name">Emma Johansson</div>
+      <div class="testi-origin">🇸🇪 Sweden · TripAdvisor Review</div>
+    </div>
+  </div>
+</div>
+
+<div class="testi-card reveal reveal-d6">
+  <div class="testi-stars">★★★★★</div>
+  <div class="testi-text">"Safe, reliable and so affordable! As solo travellers, we were a little nervous, but from the moment we contacted Cylo Tours we felt completely taken care of. The 5-day round tour was perfectly organised. Sri Lanka is incredible — Cylo Tours made it even better."</div>
+  <div class="testi-author">
+    <div class="testi-av">P</div>
+    <div>
+      <div class="testi-name">Priya &amp; Rahul Sharma</div>
+      <div class="testi-origin">🇮🇳 India · Google Review</div>
     </div>
   </div>
 </div>
@@ -671,226 +1569,234 @@ transition: opacity 0.7s ease, transform 0.7s ease;
   </div>
 </section>
 
-<!-- WHY US -->
+<!-- ═══ CTA STRIP ═══ -->
 
-<section class="why" id="why">
-  <div class="section-label">Why Cylo Tours</div>
-  <div class="section-title">Travel With Confidence</div>
-  <div class="section-sub">We are local Sri Lanka experts who care deeply about giving you an authentic, safe, and memorable experience.</div>
-  <div class="why-grid reveal">
-    <div class="why-card">
-      <span class="why-icon">🧭</span>
-      <div class="why-title">Expert Local Guides</div>
-      <div class="why-desc">Our guides are born and raised in Sri Lanka with deep knowledge of history, wildlife, and culture — not just tour scripts.</div>
-    </div>
-    <div class="why-card">
-      <span class="why-icon">💰</span>
-      <div class="why-title">Transparent Pricing</div>
-      <div class="why-desc">No hidden fees, no surprises. What you see is what you pay — including entrance fees, transport and meals where stated.</div>
-    </div>
-    <div class="why-card">
-      <span class="why-icon">🛡️</span>
-      <div class="why-title">Safe & Reliable</div>
-      <div class="why-desc">All our vehicles are fully insured and maintained. Your safety is our highest priority on every single journey.</div>
-    </div>
-    <div class="why-card">
-      <span class="why-icon">🎯</span>
-      <div class="why-title">Customized Trips</div>
-      <div class="why-desc">Every traveler is different. Tell us your interests and budget and we'll design the perfect Sri Lanka itinerary just for you.</div>
-    </div>
+<div class="cta-strip">
+  <div class="sec-eyebrow" style="justify-content:center;">Ready to Explore Sri Lanka?</div>
+  <div class="sec-title" style="max-width:640px;margin:0 auto 14px;">Your Adventure in <em>Habarana</em> Starts Here</div>
+  <p class="sec-sub" style="text-align:center;">Contact us today — no obligation, just great advice and the best prices. We'll design your perfect itinerary in minutes.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20plan%20my%20trip%20to%20Habarana%20and%20Sri%20Lanka." class="btn-wa" style="padding:15px 30px;font-size:0.95rem;">💬 WhatsApp for Best Price</a>
+    <a href="#contact" class="btn-primary" style="padding:15px 30px;font-size:0.95rem;">📩 Plan My Tour</a>
+    <a href="https://wa.me/94720176037?text=Hi!%20Please%20send%20me%20a%20free%20itinerary%20for%20Sri%20Lanka." class="btn-itinerary">✉️ Get Free Itinerary</a>
   </div>
-</section>
+</div>
 
-<!-- TESTIMONIALS -->
+<!-- ═══ CONTACT ═══ -->
 
-<section id="reviews">
-  <div class="section-label">What Tourists Say</div>
-  <div class="section-title">Real Reviews from Real Travelers</div>
-  <div class="section-sub">Don't take our word for it — here's what our guests say about their Cylo Tours experience.</div>
-  <div class="testi-grid reveal">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"Absolutely incredible experience. Our guide knew everything about Sigiriya and made the whole day feel like stepping back in time. Highly recommend Cylo Tours to anyone visiting Sri Lanka!"</div>
-      <div class="testi-author">
-        <div class="testi-avatar">S</div>
-        <div>
-          <div class="testi-name">Sarah Mitchell</div>
-          <div class="testi-origin">🇬🇧 United Kingdom</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"The Yala safari exceeded all my expectations. We spotted three leopards and a herd of elephants! The jeep and guide were top quality. Will definitely book again."</div>
-      <div class="testi-author">
-        <div class="testi-avatar">M</div>
-        <div>
-          <div class="testi-name">Marco Bianchi</div>
-          <div class="testi-origin">🇮🇹 Italy</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"Best tour company in Sri Lanka, no question. Transparent pricing, punctual, friendly and deeply passionate about sharing their country. A truly authentic experience."</div>
-      <div class="testi-author">
-        <div class="testi-avatar">A</div>
-        <div>
-          <div class="testi-name">Aiko Tanaka</div>
-          <div class="testi-origin">🇯🇵 Japan</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="contact" id="contact">
+  <div class="sec-eyebrow">Get In Touch</div>
+  <div class="sec-title">Book Your Tour <em>Today</em></div>
+  <div class="sec-sub">Fill in your details and our team will get back to you within the hour — or WhatsApp us for an instant reply.</div>
 
-<!-- CTA -->
-
-<section class="cta-section">
-  <div class="section-label">Ready to Explore?</div>
-  <div class="section-title" style="max-width:600px;margin:0 auto 16px;">Your Sri Lanka Adventure Starts Here</div>
-  <p class="section-sub" style="text-align:center;margin:0 auto 36px;">Contact us today and let our experts design the perfect trip for you. No obligation, just great advice.</p>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-    <a href="#contact" class="btn-primary">Plan My Trip</a>
-    <a href="https://wa.me/94XXXXXXXXX" class="btn-secondary">💬 WhatsApp Us</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" style="background:var(--dark);">
-  <div class="section-label">Get In Touch</div>
-  <div class="section-title">Book Your Tour Today</div>
-  <div class="section-sub">Fill in your details and our team will get back to you within a few hours.</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:860px;" class="reveal">
+  <div class="contact-grid reveal">
+    <!-- Form -->
     <div>
-      <div style="margin-bottom:20px;">
-        <label style="font-size:0.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px;">Your Name</label>
-        <input type="text" placeholder="John Smith" style="width:100%;background:var(--card-bg);border:1px solid rgba(201,151,58,0.2);color:var(--text);padding:13px 16px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
+      <div class="form-field">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith">
       </div>
-      <div style="margin-bottom:20px;">
-        <label style="font-size:0.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px;">Email Address</label>
-        <input type="email" placeholder="john@example.com" style="width:100%;background:var(--card-bg);border:1px solid rgba(201,151,58,0.2);color:var(--text);padding:13px 16px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
+      <div class="form-field">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com">
       </div>
-      <div style="margin-bottom:20px;">
-        <label style="font-size:0.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px;">Interested Tour</label>
-        <select style="width:100%;background:var(--card-bg);border:1px solid rgba(201,151,58,0.2);color:var(--text);padding:13px 16px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
-          <option>Select a Tour</option>
-          <option>Sigiriya & Dambulla</option>
-          <option>Yala Safari</option>
-          <option>Kandy City Tour</option>
-          <option>Ella Hill Country</option>
-          <option>Mirissa Whale Watching</option>
-          <option>Polonnaruwa Heritage</option>
+      <div class="form-field">
+        <label>WhatsApp / Phone</label>
+        <input type="tel" placeholder="+1 234 567 8900">
+      </div>
+      <div class="form-field">
+        <label>Interested In</label>
+        <select>
+          <option>Select an Experience</option>
+          <option>Hiriwadunna Village Tour</option>
+          <option>Elephant Gathering Safari</option>
+          <option>Sigiriya Rock Fortress</option>
+          <option>Dambulla Cave Temple</option>
+          <option>Cooking Class</option>
+          <option>Polonnaruwa Heritage Tour</option>
+          <option>3-Day Cultural Triangle Tour</option>
+          <option>5-Day Sri Lanka Tour</option>
+          <option>7-Day Sri Lanka Tour</option>
+          <option>10-Day Grand Tour</option>
           <option>Custom Package</option>
         </select>
       </div>
-      <div style="margin-bottom:24px;">
-        <label style="font-size:0.78rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:8px;">Message</label>
-        <textarea placeholder="Tell us your travel dates, group size and any special requests..." rows="4" style="width:100%;background:var(--card-bg);border:1px solid rgba(201,151,58,0.2);color:var(--text);padding:13px 16px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;resize:vertical;"></textarea>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="form-field">
+          <label>Travel Date</label>
+          <input type="date">
+        </div>
+        <div class="form-field">
+          <label>Group Size</label>
+          <select>
+            <option>1–2 People</option>
+            <option>3–5 People</option>
+            <option>6–10 People</option>
+            <option>11–20 People</option>
+            <option>20+ People</option>
+          </select>
+        </div>
       </div>
-      <button class="btn-primary" style="border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.95rem;width:100%;padding:15px;">Send Enquiry ✈️</button>
+      <div class="form-field">
+        <label>Your Message</label>
+        <textarea rows="4" placeholder="Tell us your travel plans, budget, any special requests or ask us anything..."></textarea>
+      </div>
+      <button class="btn-submit">✈️ Send Enquiry — We Reply Fast!</button>
     </div>
-    <div>
-      <div style="background:var(--card-bg);border-radius:16px;padding:32px;border:1px solid rgba(201,151,58,0.15);margin-bottom:20px;">
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:20px;">Contact Info</h3>
-        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:12px;">📞 +94 XX XXX XXXX</p>
-        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:12px;">📧 hello@cylotours.lk</p>
-        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:12px;">📍 Habarana, North Central Province, Sri Lanka</p>
-        <p style="font-size:0.88rem;color:var(--muted);">🕐 Mon–Sun: 7:00 AM – 8:00 PM</p>
-      </div>
-      <div style="background:var(--card-bg);border-radius:16px;padding:32px;border:1px solid rgba(201,151,58,0.15);">
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:16px;">Quick Response</h3>
-        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">For the fastest reply, message us on WhatsApp. We typically respond within 30 minutes during business hours.</p>
-        <a href="https://wa.me/94XXXXXXXXX" style="display:inline-block;margin-top:16px;background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;font-weight:700;font-size:0.88rem;text-decoration:none;">💬 Chat on WhatsApp</a>
-      </div>
+
+```
+<!-- Sidebar -->
+<div class="contact-sidebar">
+  <div class="c-info-card">
+    <h3>📞 Contact Information</h3>
+    <div class="c-info-item"><span class="c-icon">📱</span><a href="tel:+94720176037">+94 720 176 037</a></div>
+    <div class="c-info-item"><span class="c-icon">✉️</span><a href="mailto:cylotours@gmail.com">cylotours@gmail.com</a></div>
+    <div class="c-info-item"><span class="c-icon">📍</span>Habarana, North Central Province, Sri Lanka</div>
+    <div class="c-info-item"><span class="c-icon">🕐</span>Open Daily · 6:00 AM – 9:00 PM</div>
+    <div class="c-info-item"><span class="c-icon">⚡</span>WhatsApp replies within 15 minutes</div>
+  </div>
+  <div class="c-info-card">
+    <h3>💬 Fastest Way to Book</h3>
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:16px;line-height:1.7;font-weight:300;">For the best prices and fastest response, message us on WhatsApp. We'll send you a custom quote, itinerary and booking confirmation — all within minutes.</p>
+    <div class="quick-contact-btns">
+      <a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20a%20tour%20in%20Habarana." class="qc-btn wa">💬 WhatsApp Now — Best Price</a>
+      <a href="tel:+94720176037" class="qc-btn call">📞 Call Us Directly</a>
+      <a href="mailto:cylotours@gmail.com" class="qc-btn email">✉️ Email cylotours@gmail.com</a>
     </div>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand">
+    <div class="f-brand">
       <a href="#" class="logo">Cylo<span>Tours</span></a>
-      <p>Sri Lanka's most trusted local tour company. We show you the real Sri Lanka — beyond the guidebook.</p>
+      <p>Sri Lanka's most trusted local tour operator. Based in Habarana — the heart of the Cultural Triangle. We show you the real Sri Lanka, safely and affordably.</p>
+      <div class="f-brand-contact">
+        <a href="https://wa.me/94720176037"><span>💬</span> +94 720 176 037 (WhatsApp)</a>
+        <a href="mailto:cylotours@gmail.com"><span>✉️</span> cylotours@gmail.com</a>
+        <a href="#"><span>📍</span> Habarana, North Central Province</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Tours</h4>
+    <div class="f-col">
+      <h4>Habarana Activities</h4>
       <ul>
-        <li><a href="#">Wildlife Safaris</a></li>
-        <li><a href="#">Cultural Tours</a></li>
-        <li><a href="#">Beach Tours</a></li>
-        <li><a href="#">Hill Country</a></li>
-        <li><a href="#">Custom Packages</a></li>
+        <li><a href="#">Hiriwadunna Village Tour</a></li>
+        <li><a href="#">Elephant Gathering Safari</a></li>
+        <li><a href="#">Sigiriya Rock Fortress</a></li>
+        <li><a href="#">Dambulla Cave Temple</a></li>
+        <li><a href="#">Cooking Classes</a></li>
+        <li><a href="#">Nature Walks</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>Company</h4>
+    <div class="f-col">
+      <h4>Round Tours</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Guides</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
+        <li><a href="#">3-Day Cultural Tour</a></li>
+        <li><a href="#">5-Day Highlights</a></li>
+        <li><a href="#">7-Day Complete Tour</a></li>
+        <li><a href="#">10-Day Grand Tour</a></li>
+        <li><a href="#">Custom Itinerary</a></li>
+        <li><a href="#">Private Driver Hire</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>Support</h4>
+    <div class="f-col">
+      <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#">About Cylo Tours</a></li>
+        <li><a href="#">Our Drivers &amp; Guides</a></li>
+        <li><a href="#">Reviews &amp; Ratings</a></li>
+        <li><a href="#">Best Prices FAQ</a></li>
         <li><a href="#">Booking Policy</a></li>
-        <li><a href="#">Cancellations</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <p>© 2025 Cylo Tours. All rights reserved. Sri Lanka's Premier Tour Company.</p>
-    <div class="social-links">
-      <a href="#">f</a>
-      <a href="#">in</a>
-      <a href="#">📸</a>
-      <a href="#">▶</a>
+    <p>© 2025 Cylo Tours · Habarana, Sri Lanka · All Rights Reserved · <a href="mailto:cylotours@gmail.com" style="color:var(--amber);text-decoration:none;">cylotours@gmail.com</a></p>
+    <div class="social-row">
+      <a href="#" class="soc-btn" title="Facebook">f</a>
+      <a href="#" class="soc-btn" title="Instagram">✦</a>
+      <a href="#" class="soc-btn" title="TripAdvisor">▲</a>
+      <a href="https://wa.me/94720176037" class="soc-btn" title="WhatsApp" style="color:#25D366;">💬</a>
     </div>
   </div>
 </footer>
 
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => observer.observe(r));
+<!-- ═══ FLOATING WHATSAPP BUTTON ═══ -->
 
-  // Stagger tour cards
-  document.querySelectorAll('.tour-card').forEach((card, i) => {
-    card.style.animationDelay = `${i * 0.08}s`;
+<a href="https://wa.me/94720176037?text=Hi!%20I%20want%20to%20book%20a%20tour%20or%20get%20the%20best%20price." class="float-wa" title="WhatsApp Cylo Tours">
+  <span class="float-wa-label">💬 WhatsApp for Best Price</span>
+  💬
+</a>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+
+<script>
+  /* ── Navbar scroll shadow ── */
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Hamburger
-  function toggleMenu() {
-    const links = document.querySelector('.nav-links');
-    const cta = document.querySelector('.nav-cta');
-    if (links.style.display === 'flex') {
-      links.style.display = 'none';
-      cta.style.display = 'none';
-    } else {
-      links.style.display = 'flex';
-      links.style.flexDirection = 'column';
-      links.style.position = 'absolute';
-      links.style.top = '70px';
-      links.style.left = '0';
-      links.style.right = '0';
-      links.style.background = 'rgba(13,27,30,0.98)';
-      links.style.padding = '20px 6%';
-      links.style.gap = '20px';
-      cta.style.display = 'none';
-    }
+  /* ── Scroll reveal ── */
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(r => revealObs.observe(r));
+
+  /* ── Mobile menu ── */
+  function openMobile() {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ── Wishlist heart toggle ── */
+  document.querySelectorAll('.t-wishlist').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.textContent = this.textContent.trim() === '♡' ? '♥' : '♡';
+      this.style.color = this.textContent.trim() === '♥' ? '#e04040' : '#fff';
+    });
+  });
+
+  /* ── Smooth form focus effect ── */
+  document.querySelectorAll('.form-field input, .form-field select, .form-field textarea').forEach(el => {
+    el.addEventListener('focus', function() {
+      this.closest('.form-field').querySelector('label').style.color = 'var(--amber-lt)';
+    });
+    el.addEventListener('blur', function() {
+      this.closest('.form-field').querySelector('label').style.color = 'var(--amber-lt)';
+    });
+  });
+
+  /* ── Fake form submit (no backend) ── */
+  document.querySelector('.btn-submit').addEventListener('click', function() {
+    this.textContent = '✅ Sent! We\'ll reply via WhatsApp shortly.';
+    this.style.background = 'var(--wa-green)';
+    this.disabled = true;
+    setTimeout(() => {
+      this.textContent = '✈️ Send Enquiry — We Reply Fast!';
+      this.style.background = '';
+      this.disabled = false;
+    }, 4000);
+  });
 </script>
 
 </body>
